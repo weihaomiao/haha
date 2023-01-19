@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home page
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Stocks</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Net amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in portfolio %}
+                <tr>
+                    <td>{{ i.symbol }}</td>
+                    <td>{{ i.shares }}</td>
+                    <td>{{ i.price }}</td>
+                    <td>{{ i.net_amount }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>
+        sum : {{sum | usd}}
+    </p>
+    <p>
+        Cash balance : {{cash_balance | usd}}
+    </p>
+    <p>
+        Grand total : {{total | usd}}
+    </p>
+{% endblock %}
