@@ -299,13 +299,3 @@ def sell():
 
 if __name__ == "__main__":
     app.run(debug=False,host='0.0.0.0')
-    
-# wola, the best commit
-<<<<<<< HEAD
-
-b747df8dd27ea34f2498ecd9594e25418e9334c7
-
-# something new
-
-=======
->>>>>>> style
