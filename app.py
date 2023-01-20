@@ -297,5 +297,4 @@ def sell():
         stocks = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE username = ?", session["username"])
         return render_template("sell.html", stocks=stocks)
 
-if __name__ == "__main__":
-    app.run(debug=False,host='0.0.0.0')
+
